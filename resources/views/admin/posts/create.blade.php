@@ -4,7 +4,7 @@
     <div class="container">
         <form action="{{ route('admin.posts.store') }}" method="post" class="row g-3 needs-validation" enctype="multipart/form-data" novalidate>
             @csrf
-            <div class="mb-3">
+            <div class="mb-3 col-12">
                 <label for="title" class="form-label">Titolo</label>
                 <input type="text" class="form-control @error('title') is-invalid @enderror" id="title" name="title" value="{{ old('title') }}">
                 <div class="invalid-feedback">
@@ -18,7 +18,7 @@
                 </div>
             </div>
 
-            <div class="mb-3">
+            <div class="mb-3 col-12">
                 <label for="slug" class="form-label">Slug</label>
                 <input type="text" class="form-control @error('slug') is-invalid @enderror" id="slug" name="slug" value="{{ old('slug') }}">
                 <div class="invalid-feedback">
@@ -32,7 +32,7 @@
                 </div>
             </div>
 
-            <div class="mb-3">
+            <div class="mb-3 col-12">
                 <label for="category_id" class="form-label">Categoria</label>
                 <select class="form-select @error('category_id') is-invalid @enderror" id="category_id" name="category_id">
                     @foreach ($categories as $category)
@@ -50,7 +50,7 @@
                 </div>
             </div>
 
-            <div class="mb-3">
+            <div class="mb-3 col-12">
                 <label for="image" class="form-label">URL immagine</label>
                 <input type="url" class="form-control @error('image') is-invalid @enderror" id="image" name="image" value="{{ old('image') }}">
                 <div class="invalid-feedback">
@@ -64,7 +64,7 @@
                 </div>
             </div>
 
-            <div class="mb-3">
+            <div class="mb-3 col-12">
                 <label for="uploaded_img" class="form-label">Immagine</label>
                 <input class="form-control @error('uploaded_img') is-invalid @enderror" type="file" id="uploaded_img" name="uploaded_img">
                 <div class="invalid-feedback">
@@ -78,7 +78,7 @@
                 </div>
             </div>
 
-            <div class="mb-3">
+            <div class="mb-3 col-12">
                 <label for="content" class="form-label">Content</label>
                 <textarea class="form-control @error('content') is-invalid @enderror" id="content" name="content">{{ old('content') }}</textarea>
                 <div class="invalid-feedback">
@@ -92,7 +92,7 @@
                 </div>
             </div>
 
-            <div class="mb-3">
+            <div class="mb-3 col-12">
                 <label for="excerpt" class="form-label">Excerpt</label>
                 <textarea class="form-control @error('excerpt') is-invalid @enderror" id="excerpt" name="excerpt">{{ old('excerpt') }}"</textarea>
                 <div class="invalid-feedback">
